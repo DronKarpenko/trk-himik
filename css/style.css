@@ -441,7 +441,7 @@ footer{
 
 @media (max-width: 480px) {
 	html{
-		font-size: 8px;
+		font-size: 9px;
 	}
 	.nav ul{
 		flex-direction: column;
@@ -463,5 +463,20 @@ footer{
 		height: 100%;
 		background-color: #3075B4;
 		color: #fff;
+	}
+	.footer-columns{
+		flex-direction: column;
+		padding-left: 0;
+		padding-bottom: 2rem;
+	}
+	.footer_nav{
+		display: none;
+	}
+	.column{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.column h3{
+		text-align: center;
 	}
 }
