@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ТРК "Химик"</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	<script src="js/jquery-3.2.0.min.js"></script>
+		<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('.nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="menu">
+			<div class="logo">
+				<a href="index.html"><img src="images/logotype.png" alt="ТРК Химик"></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="rate.html">Тарифы</a></li>
+					<li><a href="support.html">Поддержка</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="about.html">О нас</a></li>
+				</ul>
+				<a href="#" id="pull">Меню</a>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		
+	</div>
+	<footer>
+		<div class="footer-columns">
+			<div class="column footer_nav">
+				<h3>Меню сайта</h3>
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="rate.html">Тарифы</a></li>
+					<li><a href="support.html">Поддержка</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="about.html">О нас</a></li>
+				</ul>
+			</div>
+			<div class="column footer_links">
+				<h3>Полезные ссылки</h3>
+				<ul>
+					<li class="personal_account"><a href="">Личный кабинет</a></li>
+					<li class="speedtest"><a href="">Проверка скорости</a></li>
+					<li class="avdeevka"><a href="">Авдеевка - Моя Родина</a></li>
+					<li class="weather"><a href="">Прогноз погоды</a></li>
+				</ul>
+			</div>
+			<div class="column footer_contact">
+				<h3>Контакты</h3>
+				<p class="adress">
+					г. Авдеевка <br>
+					ул. Карла-Маркса  д. 2а
+				</p>
+				<p class="time">
+					Пн. - Пт. с 9.00 до 18.00 <br>
+					Сб. с 9.00 до 13.00
+				</p>
+				<p class="tel">
+					<span>телефон: </span>+38(050)-785-30-15 <br>
+					<span>e-mail: </span>trkhimik1@gmail.com
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

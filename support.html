@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ТРК "Химик"</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	<script src="js/jquery-3.2.0.min.js"></script>
+		<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('.nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="menu">
+			<div class="logo">
+				<a href="index.html"><img src="images/logotype.png" alt="ТРК Химик"></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="rate.html">Тарифы</a></li>
+					<li><a href="support.html">Поддержка</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="about.html">О нас</a></li>
+				</ul>
+				<a href="#" id="pull">Меню</a>
+			</div>
+		</div>
+	</header>
+	<content>
+		<div class="content-wrapper">
+			<div class="support-inet content-block">
+				<div class="content-block-img">
+					<a href="#">
+						<img src="images/support-inet.png" alt="Интернет">
+					</a>
+				</div>
+				<div class="content-block-description">
+					<h1>Настройка услуги интернета</h1>
+					<h2>
+							Нужна помощь в настройках сети?
+					</h2>
+					<p>
+							Здесь собрана часть информации, которая поможет вам настроить Ваш компьютер, Wi-fi роутер и т.д.
+					</p>
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+			<div class="support-iptv content-block">
+				<div class="content-block-img">
+					<a href="#">
+						<img src="images/support-iptv.png" alt="Комплексные пакеты">
+					</a>
+				</div>
+				<div class="content-block-description">
+					<h1>Настройка цифрового телевидения (IPTV)</h1>
+					<h2>
+							Помощь в настройке IPTV
+					</h2>
+					<p>
+							Хотите наслаждаться качеством цифрового телевидения? ТРК "Химик" дает возможность смотреть его на телевизорах SMART, телевизионных приставках и на компьютерах / ноутбуках.
+							Далее мы Вам попробуем объяснить, как его настроить.
+					</p>
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+			<div class="chavo content-block">
+				<div class="content-block-img">
+					<a href="#">
+						<img src="images/4avo.png" alt="Телевидение">
+					</a>
+				</div>
+				<div class="content-block-description">
+					<h1>Часто задаваемые вопросы</h1>
+					<p>
+							Специалисты ТРК "Химик" создали список ответов на наиболее часто задаваемые вопросы. Если у Вас возник вопрос, рекомендуем сначала посмотреть в этом разделе. Если же не найдете ответ, тогда Вы всегда можете позвонить в абонентский отдел и задать интересующий Вас вопрос.
+					</p>
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</content>
+	<footer>
+		<div class="footer-columns">
+			<div class="column footer_nav">
+				<h3>Меню сайта</h3>
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="rate.html">Тарифы</a></li>
+					<li><a href="support.html">Поддержка</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="about.html">О нас</a></li>
+				</ul>
+			</div>
+			<div class="column footer_links">
+				<h3>Полезные ссылки</h3>
+				<ul>
+					<li class="personal_account"><a href="">Личный кабинет</a></li>
+					<li class="speedtest"><a href="">Проверка скорости</a></li>
+					<li class="avdeevka"><a href="">Авдеевка - Моя Родина</a></li>
+				</ul>
+			</div>
+			<div class="column footer_contact">
+				<h3>Контакты</h3>
+				<p class="adress">
+					г. Авдеевка <br>
+					ул. Карла-Маркса  д. 2а
+				</p>
+				<p class="time">
+					Пн. - Пт. с 9.00 до 18.00 <br>
+					Сб. с 9.00 до 13.00
+				</p>
+				<p class="tel">
+					<span>телефон: </span>+38(050)-785-30-15 <br>
+					<span>e-mail: </span>trkhimik1@gmail.com
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
