@@ -7,6 +7,7 @@
 	<title>ТРК "Химик"</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/modal.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
 	<script src="js/jquery-3.2.0.min.js"></script>
@@ -29,6 +30,31 @@
     		});
 		});
 	</script>
+
+	<!-- <script>
+		$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+		$('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+			$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal_form') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+			});
+		});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+		$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+			$('#modal_form')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+		});
+	});
+	</script> -->
+
 </head>
 
 <body>
@@ -53,7 +79,7 @@
 		<div class="content-wrapper">
 			<div class="internet content-block">
 				<div class="content-block-img">
-					<a href="#">
+					<a id="go" href="#">
 						<img src="images/inet.png" alt="Интернет">
 					</a>
 				</div>
@@ -71,7 +97,7 @@
 					<p>
 							Выберите тариф, который вам больше подходит, позвоните в абонентское отделение и закажите услугу. Либо приходите на офис ТРК "Химик". Всегда рады Вас видеть.
 					</p>
-					<a href="#">Подробнее</a>
+					<a id="go" href="internet.html">Подробнее</a>
 				</div>
 			</div>
 			<div class="comprehensive content-block">
@@ -88,12 +114,12 @@
 					<p>
 							Ищите более выгодные тарифы для просмотра ТВ и для использования сети интернет, тогда Вы попали по адресу! Подключайте комплексные пакеты от ТРК "Химик" - экономьте на услугах.
 					</p>
-					<a href="#">Подробнее</a>
+					<a href="comprehensive.html">Подробнее</a>
 				</div>
 			</div>
 			<div class="tv content-block">
 				<div class="content-block-img">
-					<a href="#">
+					<a href="comprehensive.html">
 						<img src="images/tv.png" alt="Телевидение">
 					</a>
 					</div>
@@ -105,7 +131,7 @@
 					<p>
 						Желаете знать последние новости, смотреть любимые сериалы, либо просто устали после работы и хотите посидеть на диване c пультом? Подключайте кабельное телевидение от ТРК "Химик" и смотрите с удовольствием качественное ТВ.
 					</p>
-					<a href="#">Подробнее</a>
+					<a href="tv.html">Подробнее</a>
 				</div>
 			</div>
 		</div>
@@ -125,7 +151,7 @@
 			<div class="column footer_links">
 				<h3>Полезные ссылки</h3>
 				<ul>
-					<li class="personal_account"><a href="">Личный кабинет</a></li>
+					<li class="personal_account"><a href="https://billing3.telenet.dn.ua/">Личный кабинет</a></li>
 					<li class="speedtest"><a href="">Проверка скорости</a></li>
 					<li class="avdeevka"><a href="">Авдеевка - Моя Родина</a></li>
 					<li class="weather"><a href="">Прогноз погоды</a></li>
